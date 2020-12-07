@@ -35,7 +35,7 @@ public class MyClass {
         @Override
         public int compareTo(Person person) {
             int compareResult =getAge().compareTo(person.getAge());// if 0 equals
-            if (compareResult == 0) {
+            if (compareResult == 0 && getName() != null && person.getName() != null) {
                 compareResult = getName().compareTo(person.getName());
             }
             return compareResult;
